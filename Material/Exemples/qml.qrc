@@ -2,5 +2,28 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
+        <file>src/App.qml</file>
+        <file>src/GridView.qml</file>
+        <file>src/AppBar.qml</file>
+        <file>src/AppBarButton.qml</file>
+        <file>src/BottomAppBar.qml</file>
+        <file>src/BottomBar.qml</file>
+        <file>src/FlexibleAppBar.qml</file>
+        <file>src/FlexiblePage.qml</file>
+        <file>src/FloatActionButton.qml</file>
+        <file>src/HeaderBar.qml</file>
+        <file>src/Icon.qml</file>
+        <file>src/IconButton.qml</file>
+        <file>src/Icons.qml</file>
+        <file>src/ListItem.qml</file>
+        <file>src/ListView.qml</file>
+        <file>src/Material.ttf</file>
+        <file>src/material2.ttf</file>
+        <file>src/Page.qml</file>
+        <file>src/Space.qml</file>
+        <file>src/StackView.qml</file>
+        <file>src/TabView.qml</file>
+        <file>src/Zone.qml</file>
+        <file>src/DesktopDrawer.qml</file>
     </qresource>
 </RCC>

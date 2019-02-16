@@ -8,11 +8,11 @@ Page {
     property alias navigationActionButton: siFlexibleAppBar.actions
     property alias navigationBottomActionButton: siBottomAppBar.actions
     property alias body: columinis.children
-    footer: SIBottomAppBar{
+    footer: BottomAppBar{
         id:siBottomAppBar
         visible: false
     }
-    header: SIFlexibleAppBar{
+    header: FlexibleAppBar{
         id:siFlexibleAppBar
 
     }

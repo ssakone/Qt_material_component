@@ -23,7 +23,7 @@ GridView{
             Rectangle{
                 anchors.fill: parent
                 color:'transparent'
-                SIAppBarButton{
+                AppBarButton{
                     icons:icone
                     anchors.centerIn: parent
                     font.pixelSize: 50

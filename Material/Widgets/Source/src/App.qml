@@ -11,33 +11,14 @@ ApplicationWindow {
         id:icon
     }
     onClosing: {
-        console.log(navigationStack.depth)
-
-        if(navigationStack.currentItem.objectName==="home"){
-            if(closeCount==0){
-                close.accepted=true
-            }
-            else{
-                closeCount=0
-                close.accepted=false
-            }
-
-
-        }
-        else if(navigationStack.depth>1 && closeCount==0){
+        if (navigationStack.depth>0){
             navigationStack.pop()
-            closeCount=1
-            close.accepted=false
-        }
-        else{
-            close.accepted=false
-            console.log(closeCount)
-            if(closeCount==0){
-                close.accepted=true
-            }else{
-                closeCount=closeCount-1
-                close.accepted=false
-            }
+        }else{
+           if(closeCount===1){
+               closeCount=0
+           }else{
+               Qt.quit()
+           }
         }
     }
 }

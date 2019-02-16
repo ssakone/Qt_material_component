@@ -13,19 +13,26 @@ Pane {
     property int titleSpaceWidth:15
     property color accentColor: Material.color(Material.Grey,Material.Shade900)
     property list<Item> actions: [
-        SIAppBarButton{
+        AppBarButton{
          id:lead
          icons: navigationStack.depth>1? micon.iArrow_back :  micon.iMenu
          color:foregroundColor
          onClicked: {
+
              if(icons==micon.iArrow_back){
                  navigationStack.pop()
              }else if(icons==micon.iMenu){
-                 drawer.open()
+                 if(drawer.visible===true){
+                     drawer.close()
+                 }else{
+                     drawer.open()
+                 }
+
+
              }
          }
         },
-        SISpacer{
+        Space{
            height: 1
            width: titleSpaceWidth
         },

@@ -15,7 +15,7 @@ Pane {
     property int titleSpaceWidth:15
     property color accentColor: Material.color(Material.Grey,Material.Shade900)
     property list<Item> actions: [
-        SIAppBarButton{
+        AppBarButton{
          id:lead
          icons: micon.iMenu
          color:foregroundColor
@@ -27,7 +27,7 @@ Pane {
              }
           }
         },
-        SISpacer{
+        Space{
            height: 1
            width: titleSpaceWidth
         },
@@ -71,11 +71,11 @@ Pane {
             anchors.horizontalCenter: parent.horizontalCenter
             height: 50
             children: [
-                SISpacer{
+                Space{
                        height: 1
                        width: 10
                 },
-                SIAppBarButton{
+                AppBarButton{
                  icons: micon.iArrow_back
                  color: primaryColor
                  onClicked: {

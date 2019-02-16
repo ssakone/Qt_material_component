@@ -6,7 +6,7 @@ ToolButton{
     id:control
     FontLoader {
         id: font2
-        source: "qrc:/Widgets/material2.ttf"
+        source: "qrc:/src/material2.ttf"
     }
     property string icons:""
     property alias color:texto.color

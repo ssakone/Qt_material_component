@@ -1,7 +1,10 @@
 import QtQuick 2.11
 import QtQuick.Controls 2.4
-import "../Widgets/"
 ItemDelegate {
+    property string title: ""
+    property string subTitle: ""
+    property string titleIcon: ""
+    property color foregroundColor: "black"
     width: parent.width
     height: 50
     Row{
@@ -11,21 +14,25 @@ ItemDelegate {
             height: parent.height
             padding: 5
             Label{
-                text:name
+                text:title
                 width: parent.width
                 font.pixelSize: 20
                 font.bold: true
+                color: foregroundColor
             }
             Label{
-                text:description
+                color: foregroundColor
+                text:subTitle
                 width: parent.width
                 font.pixelSize: 15
             }
 
         }
-        SIAppBarButton{
-            icons:iconItem
-            color:primaryColor
+        AppBarButton{
+            icons:titleIcon
+            color:foregroundColor
+            font.pixelSize: 30
         }
     }
+
 }

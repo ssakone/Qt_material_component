@@ -9,10 +9,11 @@ Page {
     property color backgroundColor: 'white'
     Material.background: backgroundColor
     id: button
-    header: SIAppBar{
+    header: AppBar{
         id: siAppBar
+        visible: false
     }
-    footer: SIBottomAppBar{
+    footer: BottomAppBar{
         id:siBottomAppBar
         visible: false
     }

@@ -23,7 +23,7 @@ Pane {
         source: flexibleBackgroundImage
     }
     property list<Item> actions: [
-        SIAppBarButton{
+        AppBarButton{
          id:lead
          icons: navigationStack.depth>1? micon.iArrow_back :  micon.iMenu
          color:'white'
@@ -33,7 +33,7 @@ Pane {
              }
          }
         },
-        SISpacer{
+        Space{
            height: 1
            width: titleSpaceWidth
         },

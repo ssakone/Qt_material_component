@@ -11,7 +11,7 @@ RoundButton{
     height: 80
     Material.elevation: 2
     Material.background: backgroundColor
-    SIIcon{
+    Icon{
         icon: icons
         font.pointSize: 18
         color: iconColor

@@ -1,22 +1,31 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-
-ApplicationWindow {
+import "src/" as MT
+MT.App {
+    width: 800
+    height: 600
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Scroll")
+    Component{
+        id:p1
+        MT.Page{
+            id:pg
+            header.visible: true
+            appBar.elevation: 1
+            clip:true
+            appBar.actions: [
+                MT.AppBarButton{
+                    icons:micon.iAlarm
+                    color: 'white'
+                }
 
-    ScrollView {
-        anchors.fill: parent
+            ]
 
-        ListView {
-            width: parent.width
-            model: 20
-            delegate: ItemDelegate {
-                text: "Item " + (index + 1)
-                width: parent.width
-            }
+
         }
+    }
+
+    MT.StackView{
+        anchors.fill: parent
+        initialItem: p1
     }
 }
