@@ -18,6 +18,7 @@ Item {
             width: parent.width
             height: 50
             contentWidth: 2000
+            bottomPadding: 0
         }
         StackLayout{
             id:stackPage

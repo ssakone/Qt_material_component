@@ -4,6 +4,7 @@ import "src/" as MT
 import QtQuick.Controls.Material 2.3
 MT.App {
     id:root
+    title:"Simple Material Exemple"
     width: 800
     height: 600
     visible: true
@@ -17,31 +18,47 @@ MT.App {
             appBar.height: 50
             appBar.defaultHeight: 30
             clip:true
-            appBar.actions: [
-                MT.AppBarButton{
-                    icons:micon.iAlarm
-                    color: 'white'
-                }
-
-            ]
             MT.TabView{
                 width: drawer.visible? parent.width-drawer.drawerWidth : parent.width
                 x:drawer.visible? drawer.drawerWidth : 0
+                height: parent.height
                 tabButtons: [
                     TabButton{
-                        text:"First"
+                        text:"<b>Messages <font color='pink'>18</font></b>"
                         height: 49.5019
                     },
                     TabButton{
-                        text:"First"
+                        text:"Contacts"
                     },
                     TabButton{
-                        text:"First"
+                        text:"Appels"
                     }
                 ]
                 pageStacks: [
                     Item{
+                        anchors.fill: parent
+                        MT.ListView{
+                            anchors.fill: parent
+                            colbody: [
+                                MT.ListItem{
+                                    titleIcon: micon.iPerson_outline
+                                    title: "<b>Thomas durang <font color='red'>2</font></b>  You have new message from Y..."
+                                },
+                                MT.ListItem{
+                                    titleIcon: micon.iPerson_outline
+                                    title: "<b>Oumar durang <font color='red'>5</font></b>  You have new message from Y..."
+                                },
+                                MT.ListItem{
+                                    titleIcon: micon.iPerson_outline
+                                    title: "<b>Ali durang <font color='red'>10</font></b>  You have new message from Y..."
+                                },
+                                MT.ListItem{
+                                    titleIcon: micon.iPerson_outline
+                                    title: "<b>Nathan durang <font color='red'>1</font></b>  You have new message from Y..."
+                                }
 
+                            ]
+                        }
                     }
 
                 ]
@@ -63,22 +80,59 @@ MT.App {
                         width: parent.width
                         height: parent.height-200
                         colbody: [
+                            Item{
+                              width: parent.width
+                              height: 170
+                              Column{
+                                  anchors.fill: parent
+                                  padding: 15
+                                  topPadding: 20
+                                  Rectangle{
+                                      id:idro
+                                      width: 70
+                                      height: 70
+                                      radius: 50
+                                      color: Qt.lighter('gray')
+                                      anchors.centerIn: parent
+                                      MT.AppBarButton{
+                                          anchors.centerIn: parent
+                                          icons:micon.iPerson
+                                      }
+                                  }
+                                  spacing: 20
+                                  Text{
+                                      y:130
+                                      x:5
+                                      opacity: 0.7
+                                      height: 20
+                                      width: parent.width
+                                      text:"Abdramane Sakone"
+                                      font.pixelSize: 20
+                                      font.weight: Font.Thin
+                                  }
+                              }
+                            },
                             MT.ListItem{
-                                title:"Home"
-                                titleIcon: micon.iHome
+                                title:"Message"
+                                titleIcon: micon.iMessage
                                 subTitle: "Home Page"
                             },
                             MT.ListItem{
-                                title:"Home"
-                                titleIcon: micon.iHome
+                                title:"Contact"
+                                titleIcon: micon.iContacts
+                                subTitle: "Home Page"
+                            },
+                            MT.ListItem{
+                                title:"Appel"
+                                titleIcon: micon.iCall
                                 subTitle: "Home Page"
                             }
-
                         ]
-
                     }
                 }
-
+            }
+            MT.FloatActionButton{
+                icons:micon.iAdd
             }
 
             MT.FloatActionButton{
@@ -88,7 +142,6 @@ MT.App {
                 y:parent.parent.height-90
                 parent:parent.parent.parent
             }
-
             footer: MT.AppBar{
                 visible: true
                 actions: [
@@ -98,11 +151,8 @@ MT.App {
                     MT.AppBarButton{
                         icons:micon.iMore_vert
                     }
-
-
                 ]
             }
-
         }
     }
     Component{

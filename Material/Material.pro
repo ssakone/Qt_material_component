@@ -1,5 +1,4 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    Exemples \
-    Widgets
+    Exemples
