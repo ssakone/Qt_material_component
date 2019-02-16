@@ -3,7 +3,9 @@ import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.3
 Pane {
+    property alias headerLayout: toolBarLayout
     property int elevation: 2
+    property int defaultHeight: 30
     property color backgroundColor: Material.color(Material.Blue)
     property color foregroundColor: 'white'
     property string title: ""
@@ -11,10 +13,13 @@ Pane {
     property bool centerTitle: false
     property alias leading: lead
     property int titleSpaceWidth:15
+    property bool prominent: false
+    property int prominentHeight: 200
     property color accentColor: Material.color(Material.Grey,Material.Shade900)
     property list<Item> actions: [
         AppBarButton{
          id:lead
+         //y:(parent.height/2)-implicitHeight/2
          icons: navigationStack.depth>1? micon.iArrow_back :  micon.iMenu
          color:foregroundColor
          onClicked: {
@@ -55,10 +60,11 @@ Pane {
         id:toolBarLayout
         width: parent.width+15
         anchors.horizontalCenter: parent.horizontalCenter
-        height: parent.height
+        height: defaultHeight
         children: actions
         spacing: 2
         Layout.margins: 5
         Layout.rowSpan: 1
+
     }
 }

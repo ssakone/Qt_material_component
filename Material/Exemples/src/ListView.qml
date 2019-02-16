@@ -8,7 +8,6 @@ Flickable{
     contentHeight: orientation=="vertical"?col.height:parent.height
     contentWidth: orientation=="horizontal"?row.width:parent.width
     clip: true
-
     children: [
         Row{
             height: parent.height;

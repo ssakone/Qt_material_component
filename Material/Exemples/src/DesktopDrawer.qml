@@ -13,7 +13,7 @@ Pane {
     NumberAnimation on width{
        from:0
        to:drawerWidth
-       duration: 300
+       duration: 150
        running: rnDD
 
     }

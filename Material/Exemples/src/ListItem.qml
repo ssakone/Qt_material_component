@@ -32,6 +32,7 @@ ItemDelegate {
             icons:titleIcon
             color:foregroundColor
             font.pixelSize: 30
+            enabled: false
         }
     }
 

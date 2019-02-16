@@ -25,5 +25,6 @@
         <file>src/TabView.qml</file>
         <file>src/Zone.qml</file>
         <file>src/DesktopDrawer.qml</file>
+        <file>src/AppDrawer.qml</file>
     </qresource>
 </RCC>
