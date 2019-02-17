@@ -2,7 +2,6 @@ import QtQuick 2.11
 import QtQuick.Controls 2.4
 ApplicationWindow {
     id:app
-    property alias material_font: font3
     property alias micon: icon
     property var navigationStack
     property string view: "enokas"
@@ -10,10 +9,6 @@ ApplicationWindow {
     property var drawer
     Icons{
         id:icon
-    }
-    FontLoader {
-        id: font3
-        source: "material2.ttf"
     }
     onClosing: {
         if (navigationStack.depth>0){
